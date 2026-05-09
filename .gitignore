@@ -1,0 +1,18 @@
+# Local Claude Code settings (per-machine, not shared)
+.claude/settings.local.json
+
+# Hook log output
+.claude/hooks/edits.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Node
+node_modules/
+
+# Editors
+.vscode/
+.idea/
+.DS_Store
