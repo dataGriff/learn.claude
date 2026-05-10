@@ -48,6 +48,16 @@ You usually don't have to ask. If the description matches the task, Claude will 
 
 Even with no custom agents, the harness ships a few defaults: `general-purpose`, `Explore` (fast read-only search), `Plan` (architect for implementation plans), `code-reviewer`, `doc-writer`, `test-runner`, and a couple more. They're listed in the Agent tool's docstring.
 
+## Try it
+
+The repo ships [`examples/python/todo_cli.py`](../examples/python/todo_cli.py) precisely for this. Ask Claude:
+
+```text
+review the code in examples/python/todo_cli.py
+```
+
+Claude will offer to delegate to the `code-reviewer` agent defined at [`.claude/agents/code-reviewer.md`](../.claude/agents/code-reviewer.md). Watch the agent come back with grouped findings while your main conversation stays clean.
+
 ## Cost considerations
 
 Each sub-agent is a separate context, so it's billed separately. For trivial searches, prefer the `Explore` agent or just a direct `grep`. Reserve heavyweight sub-agents for tasks that benefit from isolation.

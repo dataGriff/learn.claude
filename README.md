@@ -22,6 +22,7 @@ A hands-on tutorial repository that demonstrates **all the major capabilities of
 | [`.claude/agents/`](.claude/agents/) | Specialised sub-agents Claude can delegate to |
 | [`.claude/hooks/`](.claude/hooks/) | Shell scripts triggered by lifecycle events |
 | [`.claude/output-styles/`](.claude/output-styles/) | Custom response personas |
+| [`.mcp.json`](.mcp.json) | Project-scoped MCP server config |
 | [`docs/`](docs/) | Walkthrough — one feature per file |
 | [`examples/`](examples/) | Sample source code to experiment on |
 | [`exercises/`](exercises/) | Short hands-on tasks |
@@ -62,3 +63,8 @@ Then ask Claude something like *"review the code in `examples/python/todo_cli.py
 - [Claude Code installed](https://docs.claude.com/en/docs/claude-code/quickstart) (CLI, desktop app, or IDE extension)
 - A working shell (`bash` or `zsh`)
 - Optional: `python3` to run the sample code in `examples/`
+- Optional: `node` / `npx` if you want to enable the example MCP server in [`.mcp.json`](.mcp.json)
+
+## License
+
+[MIT](LICENSE).

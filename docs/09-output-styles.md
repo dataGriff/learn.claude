@@ -39,6 +39,8 @@ No preamble, no closing summary, no praise for working code.
 
 Activate with `/output-style code-review`.
 
+This repo ships exactly that style at [`.claude/output-styles/code-review.md`](../.claude/output-styles/code-review.md) — open it for a working reference.
+
 ## When to use a custom style
 
 - Repos with a strict review or comms style guide.

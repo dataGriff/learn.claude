@@ -57,7 +57,11 @@ This makes hooks great for guardrails: a `PreToolUse` script can refuse `rm -rf`
 
 ## Examples in this repo
 
+- [`.claude/hooks/session-start.sh`](../.claude/hooks/session-start.sh) — a `SessionStart` hook. Its stdout is *injected as additional context* for Claude, so it's a good place to surface git state or pending TODOs at the top of every session.
+- [`.claude/hooks/log-edits.sh`](../.claude/hooks/log-edits.sh) — a `PostToolUse` hook that appends a one-line audit entry to `.claude/hooks/edits.log` (gitignored) every time Claude edits or writes a file. Read it as a reference for parsing the `tool_input` payload.
 - [`.claude/hooks/status-line.sh`](../.claude/hooks/status-line.sh) — see [`docs/10-status-line.md`](10-status-line.md). (The status line is technically a separate `statusLine` config, not the `hooks` block — but it follows the same stdin-JSON pattern.)
+
+For a hands-on exercise, see [`exercises/02-add-a-hook.md`](../exercises/02-add-a-hook.md): write a `PreToolUse` guardrail that blocks `rm` calls outside the project directory.
 
 ## Debugging
 
