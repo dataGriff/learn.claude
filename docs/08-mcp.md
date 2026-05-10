@@ -44,6 +44,27 @@ MCP tools obey the same permission rules as built-in ones. In your `permissions`
 
 Pre-allow read-only tools, prompt for writes, deny anything destructive.
 
+## This repo's `.mcp.json`
+
+The file [`.mcp.json`](../.mcp.json) at the repo root configures one server:
+
+```json
+{
+  "mcpServers": {
+    "fs-examples": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "./examples"]
+    }
+  }
+}
+```
+
+`fs-examples` runs the official filesystem MCP server scoped to the `examples/` directory. Once approved, Claude gains tools like `mcp__fs-examples__read_file` and `mcp__fs-examples__list_directory` — but only over `examples/`. It's a deliberately bounded demo: anything outside that path is invisible to the server.
+
+When you start a Claude Code session here for the first time, the harness will ask whether to enable the server. Approve it, then ask Claude *"what `mcp__fs-examples__*` tools are available?"* to see what landed.
+
+`.mcp.json` is project-scoped and committed. Personal MCP servers belong in `~/.claude/settings.json` instead.
+
 ## Discovering what's available
 
 Ask Claude "what MCP tools are available?" It will read the configured servers and list them. The `/mcp` built-in slash command opens an interactive picker.
