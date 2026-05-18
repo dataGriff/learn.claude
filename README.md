@@ -43,6 +43,7 @@ A hands-on tutorial repository that demonstrates **all the major capabilities of
 10-status-line     ←  customise the status bar
 11-plan-mode       ←  read-only planning before action
 12-tips            ←  shortcuts, gotchas, productivity tips
+13-cheat-sheet     ←  quick-reference prompts and shortcuts
 ```
 
 ## A 60-second tour

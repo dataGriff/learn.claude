@@ -33,6 +33,7 @@ The numbering reflects a learning path. Skim in order if it's your first pass:
 10. [`10-status-line.md`](10-status-line.md) — bottom-bar customisation
 11. [`11-plan-mode.md`](11-plan-mode.md) — read-only planning
 12. [`12-tips.md`](12-tips.md) — productivity tips and gotchas
+13. [`13-cheat-sheet.md`](13-cheat-sheet.md) — quick-reference prompts and shortcuts
 
 ## Trying things out
 
